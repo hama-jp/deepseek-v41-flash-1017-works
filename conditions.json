@@ -1,0 +1,146 @@
+{
+  "episode": "ep507",
+  "stage": "original-three-artifacts",
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "quantization": {
+    "repository": "Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1-2.9-bpw",
+    "revision": "6d54be4fca338d79b17c3b03cc9a423bb3ac6718"
+  },
+  "base_model_revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+  "hardware": [
+    "MSI EdgeXpert MS-C931 / NVIDIA GB10 / 128 GB unified memory",
+    "ASUS GX10 / NVIDIA GB10 / 128 GB unified memory"
+  ],
+  "harness": "DeepSeek Harness 0.2.1-rc.2",
+  "original_recipe": "0e166b5f7dca029b5e98770a5c7a1c1c68531e65",
+  "original_engine": "3ff3b2ac1d71a789cb930068c46d9abed025eefa",
+  "refinement_recipe": "e65785cd3cde8e23c38d60a732a014abb6ccb533",
+  "refinement_engine": "629c524a0ea57512a5342abb498d1b7c25353343",
+  "settings": {
+    "tensor_parallel": 2,
+    "parallel_requests": 1,
+    "context": 524288,
+    "max_output_tokens": 262144,
+    "reasoning": "high",
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 20,
+    "dspark": true,
+    "ablit": false
+  },
+  "countdown_remaining_seconds": [
+    5400,
+    3600,
+    1800,
+    900,
+    300,
+    120
+  ],
+  "method": "Original tasks started in independent workspaces. Operator did not edit artwork code. No final model completion response within the deadline. Details differ for the interrupted voxel run.",
+  "metric_definition": "Generation rate includes reasoning, code and tool arguments. Weighted rate = sum(completion_tokens - 1) / sum(native seconds - native prefill_seconds), over responses with timing. Not end-to-end task speed. Missing/cancelled usage is not a proven zero.",
+  "artifacts": [
+    {
+      "id": "voxel-pagoda",
+      "file": "works/voxel-pagoda.html",
+      "sha256": "5f20829af23688253899d5fecfdcb39f76375b97aeb773c7c29a988fd3229486",
+      "bytes": 609748,
+      "prompt": "prompts/pagoda.txt",
+      "three_js": "0.170.0",
+      "time_budget_seconds": 7200,
+      "normal_model_completion": false,
+      "execution_note": "Control process interrupted; same session resumed within unchanged deadline.",
+      "quality_note": "Saved work inspected offline; appearance and controls reviewed.",
+      "generation_metrics": {
+        "responses": 100,
+        "responses_with_native_timing": 98,
+        "completion_tokens_including_reasoning": 150868,
+        "responses_without_token_usage": 2,
+        "cache_hit_responses": 54,
+        "prefill_seconds_total": 3969.772848559,
+        "prefill_seconds_median": 6.3903553305,
+        "decode_seconds_total": 2125.258545799,
+        "decode_tokens_excluding_first_each_response": 150770,
+        "decode_tokens_per_second_weighted": 70.94195682592462,
+        "decode_tokens_per_second_per_response": {
+          "min": 56.501210079459575,
+          "median": 82.2161146764749,
+          "max": 109.75015395743281
+        },
+        "finish_reasons": {
+          "tool_calls": 98,
+          "None": 2
+        }
+      }
+    },
+    {
+      "id": "railway-original",
+      "file": "works/railway-original-2h.html",
+      "sha256": "b8b7d82ae26525d83949e3311bd79a533da35b24a07cd87e27e5f67aeaa31e14",
+      "bytes": 801558,
+      "prompt": "prompts/railway.txt",
+      "three_js": "0.160.0",
+      "time_budget_seconds": 7200,
+      "normal_model_completion": false,
+      "execution_note": "Uninterrupted execution to the two-hour deadline; saved artifact, no final completion response.",
+      "quality_note": "Original two-hour artifact with known tunnel/cab defects. Additional refinement is separate.",
+      "generation_metrics": {
+        "responses": 86,
+        "responses_with_native_timing": 85,
+        "completion_tokens_including_reasoning": 136048,
+        "responses_without_token_usage": 1,
+        "cache_hit_responses": 14,
+        "prefill_seconds_total": 5157.313522819,
+        "prefill_seconds_median": 70.041608731,
+        "decode_seconds_total": 1808.430045559,
+        "decode_tokens_excluding_first_each_response": 135963,
+        "decode_tokens_per_second_weighted": 75.1828915549635,
+        "decode_tokens_per_second_per_response": {
+          "min": 53.377824817875535,
+          "median": 96.41763717156746,
+          "max": 110.76560413852982
+        },
+        "finish_reasons": {
+          "tool_calls": 85,
+          "None": 1
+        }
+      }
+    },
+    {
+      "id": "free-pagoda",
+      "file": "works/free-pagoda.html",
+      "sha256": "625b424b4edef4d2aa482f630a6cea6b035b8f585843ffd3e5547ad8821ebb03",
+      "bytes": 786839,
+      "prompt": "prompts/pagoda-threejs.txt",
+      "three_js": "0.140.0",
+      "time_budget_seconds": 7200,
+      "normal_model_completion": false,
+      "execution_note": "Uninterrupted execution to the two-hour deadline; saved artifact, no final completion response.",
+      "quality_note": "Saved work inspected offline; appearance and controls reviewed.",
+      "generation_metrics": {
+        "responses": 91,
+        "responses_with_native_timing": 90,
+        "completion_tokens_including_reasoning": 133514,
+        "responses_without_token_usage": 1,
+        "cache_hit_responses": 26,
+        "prefill_seconds_total": 4781.084551715,
+        "prefill_seconds_median": 67.038211494,
+        "decode_seconds_total": 1857.66541725,
+        "decode_tokens_excluding_first_each_response": 133424,
+        "decode_tokens_per_second_weighted": 71.82348272247786,
+        "decode_tokens_per_second_per_response": {
+          "min": 55.52187016949102,
+          "median": 86.31394968826163,
+          "max": 111.73121534541403
+        },
+        "finish_reasons": {
+          "tool_calls": 90,
+          "None": 1
+        }
+      }
+    }
+  ],
+  "separate_refinement": {
+    "included": false,
+    "note": "Assisted railway refinement is separate and has not been accepted as finished."
+  }
+}
